@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: overnull
+Build-Jdk: 10.0.2
+Implementation-Title: trabalho
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.ufc.br
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/trabalho
+Created-By: Maven Integration for Eclipse
+

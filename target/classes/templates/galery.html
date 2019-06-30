@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/g_alery.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <nav id="menu">
+        <div class="itens">
+            <a href="/" class="item-menu">
+                <img src="imgs/logo.png" alt="" class="logo-img">
+            </a>
+            <a href="/" class="item-menu">
+                <div class="item">Home</div>
+            </a>
+            <a href="/galery" class="item-menu">
+                <div class="item">Galery</div>
+            </a>
+            <a href="/pessoa/login" class="item-menu">
+                <div class="item">Login</div>
+            </a>
+            <a href="/pessoa/cadastrar" class="item-menu">
+                <div class="item">Cadastrar</div>
+            </a>
+            <a href="/admin/cadastrar" class="item-menu">
+                <div class="item">Cadastrar Prato</div>
+            </a>
+            <a href="/carrinho/listar" class="item-menu">
+                <div class="item">Carrinho</div>
+            </a>
+        </div>
+        <script src="js/i_ndex.js"></script>
+    </nav>
+    <main class="corpo">
+        <table class="table">
+        <thead>
+			<tr>
+				<th scope="col">Prato</th>
+				<th scope="col">Preco</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each = "prato : ${listaPratos}">
+				<td th:text="${prato.nome}"></td>
+				<td th:text="${prato.preco}"></td>
+				<td><img width="100" height="100" th:src="@{'/images/'+${prato.nome}+.png}"></td>
+				<td> <a th:href="@{/carrinho/add/{id}(id = ${prato.id})}">  Adicionar </a></td>
+				<td> <a th:href="@{/carrinho/remove/{id}(id = ${prato.id})}">  Remover </a></td>
+				<td> <a th:href="@{/admin/remover/{id}(id = ${prato.id})}">  Remover Prato</a></td>
+			</tr>
+			
+</tbody>
+        </table>
+            
+
+    </main>
+    <div class="rodape">
+            <hr>
+            <h4>Tel: 4002-8922,2012,Criado por João Marcelo</h4>
+        </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/g_alery.js"></script>
+</body>
+</html>

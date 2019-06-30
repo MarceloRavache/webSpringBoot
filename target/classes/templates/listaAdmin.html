@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+
+</head>
+<body>
+
+	        <table class="table">
+        <thead>
+			<tr>
+				<th scope="col">Prato</th>
+				<th scope="col">Preco</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each = "prato : ${listaPratos}">
+				<td th:text="${prato.nome}"></td>
+				<td th:text="${prato.preco}"></td>
+				<td> <a th:href="@{/admin/remover/{id}(id = ${prato.id})}"  class="btn btn-danger">  Remover </a></td>
+				<td> <a th:href="@{/editar/editar/{id}(id = ${prato.id})}"  class="btn btn-primary">  Editar </a></td>
+			</tr>
+			
+</tbody>
+        </table>
+
+</body>
+</html>
