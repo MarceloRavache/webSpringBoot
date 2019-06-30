@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+
+        <form action="/compra/finalizar" method="POST" th:object="${finalizar}">
+        	<input type="hidden" th:field="*{id}"> 
+			E-mail: <input	type="text" th:field="*{email}">
+			<input type="submit" value="Listar">
+        </form>
+
+</body>
+</html>

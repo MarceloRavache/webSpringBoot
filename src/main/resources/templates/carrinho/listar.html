@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+
+	        <table class="table">
+        <thead>
+			<tr>
+				<th scope="col">Prato</th>
+				<th scope="col">Preco</th>
+				<th scope="col">Quatidade</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each = "item : ${listaCarrinho}">
+				<td  th:text="${item.getPrato().getNome()}"></td>
+				<td th:text="${item.valor}"></td>
+				<td th:text="${item.quant}"></td>
+				<td><img width="100" height="100" th:src="@{'/images/'+${item.getPrato().getNome()}+'.png'}"></td>
+			</tr>
+			<a th:href="@{/compra/final}"> Finalizar </a>
+			
+</tbody>
+<a th:href="@{/galery}">Voltar</a>
+        </table><br>
+
+</body>
+</html>

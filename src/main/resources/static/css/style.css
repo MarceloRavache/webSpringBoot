@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: Gilroy-Light;
+    src: url('fonts/Gilroy-Light.otf');
+}
+@font-face {
+    font-family: BreeSerif;
+    src: url('fonts/BreeSerif-Regular.ttf');
+}
+
+#menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    border-bottom: 1px solid #fff;
+    background-color: rgb(139, 37, 37);;
+    z-index: 10;
+}
+.item-menu{
+    text-decoration: none;
+    display:inline-block;
+    padding:15px;
+    color: #fff;
+    font-family: 'Gilroy-Light';
+}
+.item-menu:hover{
+    text-decoration: none;
+    transition:all 0.3s ease;
+    color: white;
+    border-bottom: 3px solid rgb(167, 52, 65);
+    background-color:#E14658;
+
+}
+.mudaCor{
+    background-color: #fff;
+}
+.active{
+    background-color: #E14658;
+}
+.logo{
+    width: 60px;
+    height: 22px;
+}
+.logo-item{
+    display: block;
+    margin: 10px;
+    margin-left: 730px;
+}
+.logo-img{
+    width: 30px;
+    height: 15px;
+}
+.img-intro{
+    position: relative;
+    height: 800px;
+}
+
+.img-front{
+    width: 100%;
+    height: 670px;
+    filter:brightness(50%);
+    position: absolute;
+}
+.text-intro{
+    position: absolute;
+    color: white;
+    margin-top:250px;
+    margin-left: 550px;
+    font-family: 'BreeSerif';
+    font-size: 100px;
+}
+.text-intro-down{
+    position: absolute;
+    color: white;
+    margin-top:360px;
+    margin-left: 630px;
+    font-family: 'Gilroy-Light';
+    font-size: 20px;
+    text-align: center;
+}
+.corpo{
+    margin: 0px;
+    margin-top:100px;
+}
+.container{
+    width: 1000px;
+    height: 600px;
+    border-radius: 15px;
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    background-color: rgb(167, 52, 65);
+    position: relative;
+}
+.sobre{
+    margin-top: 110px;
+    margin-left: 180px;
+    position: absolute;
+
+}
+.img-prato1{
+    width: 300px;
+    height: 190px;
+    border-radius: 10px;
+    margin: 10px;
+    float: left;
+}
+.img-prato2{
+    width: 300px;
+    height: 190px;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 185px;
+    float: right;
+}
+.img-sobre{
+    width: 400px;
+    height: 300px;
+    border-radius: 200px;
+    margin: 10px;
+    float: left;
+}
+.text-sobre{
+    font-family: 'Gilroy-Light';
+    font-size: 40px;
+    color: #fff;
+    display: inline;
+}
+
+.rodape{
+    position: relative;
+    width: 98.5%;
+    height: 200px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #333;
+    clear: both;
+}
+.rodape h4{
+    text-align: center;
+    margin-top: 80px;
+}
